@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+    <!-- 配置一系列常量 -->
+    <constant name="struts.i18n.encoding" value="UTF-8"/>
+    <!-- constant name="struts.devMode" value="true"/ -->
+    <constant name="struts.enable.DynamicMethodInvocation" value="false"/>
+    <constant name="struts.objectFactory.spring.autoWire" value="auto"></constant>
+    <constant name="struts.multipart.saveDir" value="/tmp"/>
+	<constant name="struts.multipart.maxSize" value="100000000"/> 
+   	<package name="default" namespace="/"
+extends="struts-default">
+      <action name="login" class="com.webprague.StudentSign.action.Login">
+            <result type="redirect" name="student" >/index_student.jsp</result>
+            <result type="redirect" name="teacher" >/index_teacher.jsp</result>
+            <result name="login">login.jsp</result>
+      </action>
+   </package>
+</struts>    
