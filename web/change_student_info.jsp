@@ -22,7 +22,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<div class="main">
 			<h1>学工助理签到平台-助理个人信息修改</h1>
 			<div class="input_form">
-				<form id="register_form" method="post" onkeypress="if(event.keyCode==13||event.which==13){ register();}">
+				<form id="register_form" action="change_student_info.action" method="post" onkeypress="if(event.keyCode==13||event.which==13){ register();}">
                     <input type="hidden" name="type" value="student"/>
                     学号（不可修改）：
                     <input readonly="readonly" placeholder="学号" type="text" name="username" value="${user.username}"/>

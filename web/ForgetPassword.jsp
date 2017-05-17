@@ -22,7 +22,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<div class="main">
 			<h1>密码找回</h1>
 			<div class="input_form">
-				<form id="login_form" method="post" onkeypress="if(event.keyCode==13||event.which==13){ send();}">
+				<form id="login_form" action="ForgetPassword.action" method="post" onkeypress="if(event.keyCode==13||event.which==13){ send();}">
 					<input type="text" name="username" id="username" value="" placeholder="请输入账号" >
 					<br>
 					<br>

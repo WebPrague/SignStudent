@@ -23,6 +23,8 @@ public class SignInService {
 		signin.setSigninTime(signin_time);
 		signin.setSignoutTime(new Timestamp(0));
 		signin.setTeacherUsername(teacher_uasername);
+		signin.setRemark("");
+		signin.setStatus("");
 		new SignInDAO().save(signin);
 		return 0;
 	}
@@ -99,6 +101,7 @@ public class SignInService {
 		List<SignIn>list = new SignInDAO().findByTeacherUsername(username);
 		return list.size() / usermount + 1;
 	}
+
 	//学生用户查询指定日期
 	public static List<SignIn> select_time_message(String date) throws ParseException{
 		SignIn select_time_person = new SignIn();

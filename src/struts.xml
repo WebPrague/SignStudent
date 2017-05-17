@@ -8,12 +8,43 @@
     <constant name="struts.objectFactory.spring.autoWire" value="auto"></constant>
     <constant name="struts.multipart.saveDir" value="/tmp"/>
 	<constant name="struts.multipart.maxSize" value="100000000"/> 
-   	<package name="default" namespace="/"
-extends="struts-default">
+   	<package name="default" namespace="/" extends="struts-default">
       <action name="login" class="com.webprague.StudentSign.action.Login">
-            <result type="redirect" name="student" >/index_student.jsp</result>
-            <result type="redirect" name="teacher" >/index_teacher.jsp</result>
+            <result type="redirect" name="student" >/index_student.action</result>
+            <result type="redirect" name="teacher" >/index_teacher.action</result>
             <result name="login">login.jsp</result>
       </action>
+        <action name="index_student" class="com.webprague.StudentSign.action.Student_index">
+            <result name="index_student">index_student.jsp</result>
+        </action>
+        <action name="change_student_info" class="com.webprague.StudentSign.action.ChangeStudentInfo">
+            <result type="redirect"  name="index_student">/index_student.action</result>
+            <result name="change_student_info">change_student_info.jsp</result>
+        </action>
+        <action name="change_teacher_info" class="com.webprague.StudentSign.action.ChangeTeacherInfo">
+            <result name="change_teacher_info">change_teacher_info.jsp</result>
+            <result type="redirect" name="index_teacher">/index_teacher.action</result>
+        </action>
+        <action name="index_teacher" class="com.webprague.StudentSign.action.Teacher_index">
+            <result name="index_teacher">index_teacher.jsp</result>
+        </action>
+        <action name="ForgetPassword" class="com.webprague.StudentSign.action.ForgetPassword">
+            <result name="ForgetPassword">ForgetPassword.jsp</result>
+            <result name="ForgetPassword" type="redirect">/ForgetPassword.action</result>
+            <result name="jump">jump.jsp</result>
+        </action>
+        <action name="register_teacher" class="com.webprague.StudentSign.action.Teacher_register">
+            <result name="register_teacher">register_teacher.jsp</result>
+        </action>
+        <action name="register_student" class="com.webprague.StudentSign.action.Student_register">
+            <result name="register_student">register_student.jsp</result>
+        </action>
+        <action name="sign_in" class="com.webprague.StudentSign.action.SignIn">
+            <result name="jump">jump.jsp</result>
+        </action>
+        <action name="sign_off" class="com.webprague.StudentSign.action.SignOut">
+            <result name="jump">jump.jsp</result>
+        </action>
+
    </package>
 </struts>    

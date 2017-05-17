@@ -21,7 +21,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<div class="main">
 			<h1>学工助理签到平台-助理注册</h1>
 			<div class="input_form">
-				<form id="register_form" method="post" onkeypress="if(event.keyCode==13||event.which==13){ register();}">
+				<form id="register_form" method="post" action="register_student.action" onkeypress="if(event.keyCode==13||event.which==13){ register();}">
                     <input type="hidden" name="type" value="student"/>
                     <input placeholder="学号" type="text" name="username"/>
                     <input placeholder="姓名" type="text" name="name"/>

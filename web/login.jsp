@@ -24,7 +24,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<div class="main">
 			<h1>学工助理签到平台 V1.0-登录</h1>
 			<div class="input_form">
-				<form id="login_form" action="login.java" method="post" onkeypress="if(event.keyCode==13||event.which==13){ login();}">
+				<form id="login_form" action="login.action" method="post" onkeypress="if(event.keyCode==13||event.which==13){ login();}">
 					<input type="text" name="username" id="username" value="" placeholder="请输入账号" >
 					<input type="password" name="password" id="password" value="" placeholder="请输入密码" >
 					<div align="center"><a href="ForgetPassword.java" >忘记密码？</a></div>

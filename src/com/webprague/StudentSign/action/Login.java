@@ -16,7 +16,7 @@ import com.webprague.StudentSign.service.UserTeacherService;
 public class Login extends ActionSupport{
 	private String username;
 	private String password;
-	private Map<String , Object>session;
+	private Map<String , Object> session;
 	//	private HttpSession session2;
 	@Override
 	public String execute() throws Exception {

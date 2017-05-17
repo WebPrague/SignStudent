@@ -207,7 +207,13 @@
     }
     function data_picked() {
         var date_form = document.getElementById('date_form');
-        date_form.submit();
+        var select_form = document.getElementById('date_form').Value;
+        if(select_form == "") {
+            show_all();
+        }else{
+            date_form.submit();
+        }
+
     }
 </script>
 <% if(signIn!=null){ %>
